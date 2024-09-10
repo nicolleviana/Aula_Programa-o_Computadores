@@ -3,8 +3,11 @@ Desenvolva um programa que calcule o valor do frete para uma compra: frete grati
 caso contrario, calcule o frete de R$50,00.
 */
 
-var frete = parseFloat(prompt("Digite o valor da sua compra: "));
-
-if(frete >= 300){
+var valor = parseFloat(prompt("Digite o valor da sua compra: "));
+var frete = 50;
+var calcularFrete = valor + 50;
+if(valor >= 300){
     console.log("Seu frete é grátis.");
+}else{
+console.log("Sua compra é abaixo de R$300, seu frete é: R$" + calcularFrete);
 }
