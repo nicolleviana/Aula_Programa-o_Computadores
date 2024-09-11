@@ -10,3 +10,13 @@ Especificação Preço unitário
 Escrever um algoritmo que leia o código do lanche pedido, a quantidade e calcule o valor a ser pago por aquele lanche. 
 */
 
+var codigoLanche = parseInt(prompt("Digite o código do lanche: "));
+var quantidade = parseInt(prompt("Digite a quantidade que deseja: "));
+
+if (cardapio[codigoLanche]){
+    var precoTotal = cardapio[codigoLanche] + quantidade;
+    console.log("O valor a ser pago é: R$" + precoTotal); 
+} else{
+    console.log("Código de lanche inválido!");
+}
+
