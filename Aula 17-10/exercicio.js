@@ -6,28 +6,37 @@ pergunte qual operação ele deseja fazer (+ ou *)
 realize o calculo e exiba na tela, calculo e resultado.
 */
 
-var numero = [];
+var numeros = [];
 var i = 0;
 var adicionar = 'sim';
 
 while(adicionar  == 'sim'){
-    numero[i] = parseInt(prompt("Digite o número " + (i+1) ));
+    numeros[i] = parseFloat(prompt("Digite um número " ));
     i++;
+
     adicionar = prompt("Deseja adicionar mais algum número?\n Digite 'sim' para continuar\n Digite 'não' para parar ");
 }
 
-var operacao = prompt("Qual das seguintes operações deseja utilizar?\n + ou *: ");
-var resultado = 0;
-i=0;
-if(operacao == '+'){
-    resultado = numero[i];
-}else if(operacao == '*'){
-    resultado = numero[i];
+var operacao = prompt("Qual das seguintes operações deseja utilizar?\n +(somar) ou *(multiplicar): ");
+ 
+var total = 0;
+var resultado = 1;
+i = 0;
+
+if(operacao == "+"){
+    while (i < numeros.length) {
+        total += numeros[i];
+        i++;
+    }
+}else {
+     while(i < numeros.length){
+        resultado *= numeros[i];
+        i++;
+    }
+    resultado = total;
 }
 
+console.log("O resultado da operação é: " + total);
 
 
 
-
-
-console.log("O resultado da operação é: " + resultado);
