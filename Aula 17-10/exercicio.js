@@ -16,6 +16,7 @@ while(adicionar  == 'sim'){
 
     adicionar = prompt("Deseja adicionar mais algum número?\n Digite 'sim' para continuar\n Digite 'não' para parar ");
 }
+while(console.log(numeros));
 
 var operacao = prompt("Qual das seguintes operações deseja utilizar?\n +(somar) ou *(multiplicar): ");
  
