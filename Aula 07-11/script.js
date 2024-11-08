@@ -19,3 +19,4 @@ for (var i = 0; i < frutas.length; i++){
     console.log(`A fruta [ " ${i} " ] é: "  ${frutas[i]} `);
 }
 
+
