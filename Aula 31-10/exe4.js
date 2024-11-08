@@ -4,47 +4,38 @@ Ao final, some todas as receitas e despesas, exiba o total e apresente a diferen
 */
 
 var receitas = [];
-var i = 0;
-var condicao = 'sim';
-
-while( condicao == 'sim'){
-receitas[i] = prompt("Digite a receita: ");
-i++;
-
-condicao = prompt("Deseja adicionar mais receitas?\n Digite 'sim' para continuar: ");
-}
-var soma1 = receitas + i;
-
-i = 0;
-while(i < receitas.length){
-    console.log(receitas[i]);
-    i++;
-}
-
-
 var despesas = [];
 var i = 0;
 var condicao = 'sim';
+var totalReceita = 0, totalDespesas = 0;
+
 
 while( condicao == 'sim'){
-despesas[i] = prompt("Digite a despesa: ");
+receitas[i] = parseFloat(prompt("Digite o valor da receita: "));
 i++;
 
-condicao = prompt("Deseja adicionar mais despesas?\n Digite 'sim' para continuar: ");
+condicao = prompt("Deseja adicionar mais?\n Digite 'sim' para continuar: ");
 }
 
-var soma2 = despesas + i;
+condicao = 'sim'
+i = 0;
 
+while( condicao == 'sim'){
+despesas[i] = parseFloat(prompt("Digite o valor  da despesa: "));
+i++;
 
-i = 0
-while(i < despesas.length){
-    console.log(despesas[i]);
-    i++;
+condicao = prompt("Deseja adicionar mais?\n Digite 'sim' para continuar: ");
 }
 
 
-var diferenca = soma1 - soma2;
+for(var i = 0; i < receitas.length; i++){
+    totalReceita += receitas[i];
+    console.log("O total das receitas é: " + totalReceita);
+}
 
-console.log("Total de receitas: " + soma1);
-console.log("Total das despesas: " + soma2);
-console.log("A diferença é: " + diferenca);
+for(var i = 0; i < despesas.length; i++){
+    totalDespesas += despesas[i];
+    console.log("O total das despesas é: ");
+}
+
+console.log("A diferença entre receita e despesa é " + (totalReceita - totalDespesas));
